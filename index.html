@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sample Application</title>
+</head>
+<body>
+<center>
+<h1>This is a ZippyOPS Demo Application!</h1>
+<img alt="" src="zippy.png">
+<h1></h1>
+This is a Nodejs app Deployed by Kubernetes 
+
+<script>
+	var OSName="Unknown OS";
+	if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+	if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+	if (navigator.appVersion.indexOf("X11")!=-1) OSName="Linux";
+	if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+	document.write(' on '+OSName+' at ');
+</script>
+
+<p id="demo"></p>
+
+<script>
+	var d = new Date();
+	document.getElementById("demo").innerHTML = d;
+</script> 
+
+<p id="task"></p>
+
+<script>
+        var d = new Date();
+        document.getElementById("task").innerHTML = ("for zippyops Demo test5*****!!!!!.");
+</script>
+
+<script>
+var ip = req.header('x-forwarded-for') || req.connection.remoteAddress;
+</script>
+
+</center>
+</body>
+</html>
